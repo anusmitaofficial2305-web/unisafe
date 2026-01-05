@@ -27,7 +27,7 @@ export const Header = () => {
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
           </div>
           <span className="font-display text-xl font-bold text-foreground">
-            Medi<span className="text-primary">Rescue</span>
+            U&I-<span className="text-primary">Safe</span>
           </span>
         </Link>
 
@@ -51,6 +51,11 @@ export const Header = () => {
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
           <SOSButton size="default" />
+          <Link to="/profile">
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <User className="h-5 w-5" />
+            </Button>
+          </Link>
           <Link to="/dashboard">
             <Button variant="outline" size="sm" className="gap-2">
               <User className="h-4 w-4" />
@@ -61,6 +66,11 @@ export const Header = () => {
             <Button variant="default" size="sm" className="gap-2">
               <Building2 className="h-4 w-4" />
               Hospital
+            </Button>
+          </Link>
+          <Link to="/auth">
+            <Button variant="secondary" size="sm">
+              Login
             </Button>
           </Link>
         </div>
@@ -98,6 +108,12 @@ export const Header = () => {
               </Link>
             ))}
             <div className="pt-4 space-y-2 border-t border-border">
+              <Link to="/profile" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start gap-2">
+                  <User className="h-4 w-4" />
+                  My Profile
+                </Button>
+              </Link>
               <Link to="/dashboard" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="outline" className="w-full gap-2">
                   <User className="h-4 w-4" />
@@ -108,6 +124,11 @@ export const Header = () => {
                 <Button variant="default" className="w-full gap-2">
                   <Building2 className="h-4 w-4" />
                   Hospital Portal
+                </Button>
+              </Link>
+              <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="secondary" className="w-full">
+                  Login / Sign Up
                 </Button>
               </Link>
             </div>
