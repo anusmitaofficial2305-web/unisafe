@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { 
   AlertTriangle, 
   MapPin, 
@@ -16,7 +17,9 @@ import {
   Bell,
   Search,
   Filter,
-  MoreVertical
+  MoreVertical,
+  ArrowLeft,
+  Home
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -76,6 +79,11 @@ export default function Hospital() {
       <header className="sticky top-0 z-40 border-b border-border bg-card shadow-sm">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-4">
+            <Link to="/">
+              <Button variant="ghost" size="icon" className="mr-2">
+                <ArrowLeft className="h-5 w-5" />
+              </Button>
+            </Link>
             <div className="h-10 w-10 rounded-xl bg-gradient-hero flex items-center justify-center">
               <Activity className="h-6 w-6 text-primary-foreground" />
             </div>

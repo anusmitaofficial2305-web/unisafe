@@ -45,7 +45,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center gap-2 mb-4">
               <Heart className="h-8 w-8 text-primary fill-primary/20" />
               <span className="font-display text-xl font-bold">
-                Medi<span className="text-primary">Rescue</span>
+                U&I-<span className="text-primary">Safe</span>
               </span>
             </Link>
             <p className="text-background/70 text-sm mb-6 max-w-xs">
@@ -56,11 +56,11 @@ export const Footer = () => {
             <div className="space-y-3 text-sm text-background/70">
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4" />
-                <span>Emergency: 1-800-MEDI-SOS</span>
+                <span>Emergency: 1-800-UNI-SAFE</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4" />
-                <span>support@medirescue.com</span>
+                <span>support@unisafe.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4" />
@@ -138,7 +138,7 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/60">
-            © 2024 MediRescue. All rights reserved.
+            © 2024 U&I-Safe. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4">

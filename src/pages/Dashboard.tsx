@@ -159,26 +159,29 @@ export default function Dashboard() {
           {/* Sidebar */}
           <div className="space-y-6">
             {/* Profile Card */}
-            <Card>
-              <CardContent className="pt-6">
-                <div className="text-center">
-                  <div className="h-20 w-20 rounded-full bg-gradient-hero mx-auto mb-4 flex items-center justify-center">
-                    <User className="h-10 w-10 text-primary-foreground" />
+            <Card className="cursor-pointer hover:shadow-lg transition-all group">
+              <Link to="/profile">
+                <CardContent className="pt-6">
+                  <div className="text-center">
+                    <div className="h-20 w-20 rounded-full bg-gradient-hero mx-auto mb-4 flex items-center justify-center group-hover:scale-105 transition-transform">
+                      <User className="h-10 w-10 text-primary-foreground" />
+                    </div>
+                    <h3 className="font-semibold text-foreground">John Doe</h3>
+                    <p className="text-sm text-muted-foreground">john.doe@email.com</p>
+                    <p className="text-xs text-primary mt-2">Tap to view profile →</p>
+                    <div className="flex justify-center gap-2 mt-4">
+                      <Button variant="outline" size="sm" onClick={(e) => e.stopPropagation()}>
+                        <Settings className="h-4 w-4 mr-1" />
+                        Settings
+                      </Button>
+                      <Button variant="outline" size="sm" onClick={(e) => e.stopPropagation()}>
+                        <Bell className="h-4 w-4 mr-1" />
+                        Alerts
+                      </Button>
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-foreground">John Doe</h3>
-                  <p className="text-sm text-muted-foreground">john.doe@email.com</p>
-                  <div className="flex justify-center gap-2 mt-4">
-                    <Button variant="outline" size="sm">
-                      <Settings className="h-4 w-4 mr-1" />
-                      Settings
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Bell className="h-4 w-4 mr-1" />
-                      Alerts
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
+                </CardContent>
+              </Link>
             </Card>
 
             {/* Emergency Contacts */}
